@@ -4,11 +4,25 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
         <title>Урок 10 - JavaScript</title>
-        <link rel="stylesheet" href="css/jquery.fancybox.min.css">            
+        <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>            
+        <link rel="stylesheet" href="css/swiper.min.css">        
+        <script src="js/swiper.min.js"></script>                     
+        <script>        
+            $(document).ready(function () {
+            //initialize swiper when document ready  
+            var mySwiper = new Swiper ('.swiper-container', {
+            // Optional parameters
+                nextButton: '.swiper-button-next',
+                prevButton: '.swiper-button-prev',
+                loop: true
+                })        
+            });            
+          </script>                        
     </head>
     <body>
         <h1>Привет, JS</h1>
         <script>document.write('<h2>Пример write</h2>');</script>
+        <h1>Галерея с эффектом fancybox</h1>
         <a data-fancybox="gallery" href="images/big-1.jpg" >
             <img src="images/small-1.jpg" height=200 width=200>
         </a>
@@ -27,9 +41,78 @@
         <a data-fancybox="gallery" href="images/big-6.jpg">
             <img src="images/small-6.jpg" height=200 width=200>
         </a>
-    
+        <br>    
+        <h1>Галерея с эффектом swiper</h1>        
+        <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="images/small-1.jpg" height=200 width=200></div>
+                <div class="swiper-slide"><img src="images/small-2.jpg" height=200 width=200></div>
+                <div class="swiper-slide"><img src="images/small-3.jpg" height=200 width=200></div>
+                <div class="swiper-slide"><img src="images/small-4.jpg" height=200 width=200></div>
+                <div class="swiper-slide"><img src="images/small-5.jpg" height=200 width=200></div>
+                <div class="swiper-slide"><img src="images/small-6.jpg" height=200 width=200></div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+        </div>       
+        <h1>Галерея с эффектом swiper+fancybox</h1>
+        <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <a data-fancybox="gallery" href="images/big-1.jpg" >
+                        <img src="images/small-1.jpg" height=200 width=200>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a data-fancybox="gallery" href="images/big-2.jpg" >
+                        <img src="images/small-2.jpg" height=200 width=200>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a data-fancybox="gallery" href="images/big-3.jpg" >
+                        <img src="images/small-3.jpg" height=200 width=200>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a data-fancybox="gallery" href="images/big-4.jpg" >
+                        <img src="images/small-4.jpg" height=200 width=200>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a data-fancybox="gallery" href="images/big-5.jpg" >
+                        <img src="images/small-5.jpg" height=200 width=200>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a data-fancybox="gallery" href="images/big-6.jpg" >
+                        <img src="images/small-6.jpg" height=200 width=200>
+                    </a>
+                </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+        </div>       
+                
         <script src="js/script.js"></script>
-        <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>    
-        <script src="js/jquery.fancybox.min.js"></script>   
+        <script src="js/jquery.fancybox.min.js"></script>     
+        <link rel="stylesheet" href="css/jquery.fancybox.min.css">               
     </body>
 </html>    
